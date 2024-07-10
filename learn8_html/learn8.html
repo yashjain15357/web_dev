@@ -1,0 +1,105 @@
+<!--video, audio,embedded,iframe  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+  </head>
+  <body>
+    <video
+    src="khushi.mp4"
+    height="275"
+    controls
+    loop
+    autoplay
+    poster="practice.webp"
+    width="500"         
+    preload="auto"       
+    playsinline          
+    crossorigin="anonymous" 
+    disablePictureInPicture 
+    disableremoteplayback 
+  >
+  <!-- </video> -->
+  
+    >
+    </video>
+    <!-- This video element will play the video file "khushi.mp4". 
+         - height="275": Sets the height of the video to 275 pixels.
+         - controls: Adds play, pause, and other control buttons to the video.
+         - loop: The video will restart automatically after reaching the end.
+         - muted: The video will play without sound.
+         - autoplay: The video will start playing as soon as it is ready.
+         - poster="practice.webp": Specifies an image to be shown while the video is downloading or until the user hits the play button.
+         Specifies the width of the video player.
+         Specifies how the video should be loaded when the page loads. Values: 'none', 'metadata', 'auto'.
+        Allows video to play inline on mobile devices instead of going fullscreen.
+        Configures the CORS settings for the video. Values: 'anonymous', 'use-credentials'.
+        Disables the remote playback of the video.
+    -->
+  
+    <audio src="women-haha.mp3" controls autoplay loop muted preload="none">
+      haaa audio
+    </audio>
+    <!-- This audio element will play the audio file "women-haha.mp3".
+         - controls: Adds play, pause, and other control buttons to the audio.
+         - autoplay: The audio will start playing as soon as it is ready.
+         - loop: The audio will restart automatically after reaching the end.
+         - muted: The audio will play without sound.
+         - preload="none": The audio file will not be loaded until the user interacts with it.
+         - The text "haaa audio" is displayed if the browser does not support the audio element.
+    -->
+  
+    <svg height="100" width="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+    <!-- This SVG element defines a 100x100 pixels area containing a circle.
+         - <circle>: Defines a circle within the SVG.
+         - cx="50": The x-coordinate of the center of the circle is 50 pixels.
+         - cy="50": The y-coordinate of the center of the circle is 50 pixels.
+         - r="40": The radius of the circle is 40 pixels.
+         - stroke="black": The color of the circle's outline is black.
+         - stroke-width="3": The width of the circle's outline is 3 pixels.
+         - fill="red": The color inside the circle is red.
+    -->
+  
+    <img src="y.svg" alt="My Svg Image" />
+    <!-- This img element will display the image file "y.svg".
+         - src="y.svg": Specifies the path to the image file.
+         - alt="My Svg Image": Provides alternative text if the image cannot be displayed.
+    -->
+  
+    <iframe
+      src="https://www.codewithharry.com/"
+      title="web page"
+      width="444"
+      height="444"
+    ></iframe>
+    <!-- This iframe element will embed another webpage (https://www.codewithharry.com/) within the current page.
+         - src="https://www.codewithharry.com/": Specifies the URL of the webpage to embed.
+         - title="web page": Provides a title for the iframe for accessibility purposes.
+         - width="444": Sets the width of the iframe to 444 pixels.
+         - height="444": Sets the height of the iframe to 444 pixels.
+    -->
+  
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tVzUXW6siu0?si=NuQZuYqrMHn7Pg-i&amp;start=739" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic" allowfullscreen></iframe> -->
+    <!-- This is a commented-out iframe element which would embed a YouTube video.
+         - width="560": Sets the width of the iframe to 560 pixels.
+         - height="315": Sets the height of the iframe to 315 pixels.
+         - src="https://www.youtube.com/embed/tVzUXW6siu0?si=NuQZuYqrMHn7Pg-i&amp;start=739": Specifies the URL of the YouTube video to embed, starting at 739 seconds.
+         - title="YouTube video player": Provides a title for the iframe for accessibility purposes.
+         - frameborder="0": Removes the border around the iframe.
+         - allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic": Allows various features such as autoplay and clipboard write.
+         - allowfullscreen: Allows the iframe to be viewed in fullscreen mode.
+    -->
+  </body>
+  
+</html>
