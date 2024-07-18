@@ -1,0 +1,105 @@
+<!-- learn how to make a basic form in html -->
+ <!-- for learn A to Z in detail use this link 'https://www.w3schools.com/html/html_forms.asp' -->
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <!-- Specifies the character encoding for the document -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Ensures the webpage is responsive by setting the viewport width -->
+     <title>learn Form in HTML</title>
+     <!-- Sets the title of the webpage -->
+   </head>
+   <body>
+     <!-- Contains the content of the HTML document -->
+     <p>Learn how to make a form in HTML:</p>
+     <!-- Defines a paragraph of text -->
+     <form action="post">
+       <!-- Defines a form that will send data using the post method -->
+       <div>
+         <!-- Defines a division or section in the HTML document -->
+         <label for="username">Enter your username:</label>
+         <!-- Associates a label with a specific form element using the for attribute -->
+         <input
+           type="text"
+           id="username"
+           name="username"
+           placeholder="Enter your username"
+           autofocus
+         />
+         <!-- Defines an input field
+              type="text": Specifies a single-line text input
+              id="username": Unique identifier for the input field
+              name="username": Name of the input field, used for form submission
+              placeholder="Enter your username": Provides a hint to the user about what to enter
+              autofocus: Automatically focuses on this field when the page loads -->
+       </div>
+       <div>
+         <label for="female">Female</label>
+         <input type="radio" id="female" name="gender" value="female" />
+         <!-- type="radio": Specifies a radio button -->
+         <label for="male">Male</label>
+         <input type="radio" id="male" name="gender" value="male" />
+         <!-- type="radio": Specifies a radio button -->
+         <label for="trans">Trans</label>
+         <input type="radio" id="trans" name="gender" value="trans" />
+         <!-- type="radio": Specifies a radio button -->
+       </div>
+       <div>
+         <input type="checkbox" id="subscribe" name="subscribe" value="yes" />
+         <!-- type="checkbox": Specifies a checkbox -->
+         <label for="subscribe">Subscribe to my YouTube channel</label>
+       </div>
+       <div>
+         <input type="checkbox" id="follow" name="follow" value="yes" />
+         <!-- type="checkbox": Specifies a checkbox -->
+         <label for="follow">Follow my Instagram handle</label>
+       </div>
+       <div>
+         <label for="comment">Enter your feedback:</label>
+         <!-- Associates a label with a specific form element using the for attribute -->
+         <br />
+         <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+         <!-- Defines a multi-line text input
+              id="comment": Unique identifier for the textarea
+              name="comment": Name of the textarea, used for form submission
+              rows="4": Specifies the number of visible text lines
+              cols="50": Specifies the visible width of the text area -->
+       </div>
+       <div>
+         <label for="fruits">Select your favorite fruit: </label>
+         <!-- Associates a label with a specific form element using the for attribute -->
+         <select name="fruits" id="fruits">
+           <!-- Defines a drop-down list
+                name="fruits": Name of the select field, used for form submission
+                id="fruits": Unique identifier for the select field -->
+           <option value="none">None</option>
+           <!-- value="...": Specifies the value to be sent to the server when the option is selected -->
+           <option value="apple">Apple</option>
+           <!-- value="...": Specifies the value to be sent to the server when the option is selected -->
+           <option value="banana">Banana</option>
+           <!-- value="...": Specifies the value to be sent to the server when the option is selected -->
+           <option value="cherry">Chery</option>
+           <!-- value="...": Specifies the value to be sent to the server when the option is selected -->
+         </select>
+       </div>
+       <div>
+         <label for="sub">Click on the submit button:</label>
+         <!-- Associates a label with a specific form element using the for attribute -->
+         <input type="submit" id="sub" />
+         <!-- type="submit": Specifies a submit button -->
+       </div>
+     </form>
+
+   </body>
+ </html>
+ <!-- When the form is submitted, the data will be formatted as key-value pairs 
+  based on the names of the form elements
+ {
+   "username": "exampleUser",
+   "gender": "male",
+   "subscribe": "yes",
+   "follow": "yes",
+   "comment": "This is my feedback.",
+   "fruits": "apple"
+ } -->
