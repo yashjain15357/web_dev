@@ -1,0 +1,78 @@
+<!-- Learn about the 'Image, Table, List'  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image, Table, List</title>
+    <link rel="stylesheet" href="referral.css" />
+  </head>
+  <body>
+    <!-- img tag is used to embed an image -->
+    <img width= "200" height="110" src="learn4.img" alt="image not found">
+    
+    <!-- table tag is used to create a table -->
+    <table>
+      <!-- caption tag is used to provide a title for the table -->
+      <caption style="border: 2px solid rgb(73, 2, 237)">student information</caption>
+      
+      <!-- thead tag is used to group header content in a table -->
+      <thead>
+        <!-- tr tag is used to define a row in the table -->
+        <tr>
+          <!-- th tag is used to define a header cell in a table -->
+          <th style="border: 2px solid rgb(73, 2, 237)">name</th>
+          <th style="border: 2px solid rgb(11, 26, 235)">topper</th>
+          <th style="border: 2px solid rgb(15, 11, 245)">age</th>
+          <th style="border: 2px solid rgb(11, 26, 235)">sex</th>
+        </tr>
+      </thead>
+      
+      <!-- tbody tag (not in original but implied) is used to group body content in a table -->
+      <tbody>
+        <!-- tr tag is used to define a row in the table -->
+        <tr>
+          <!-- td tag is used to define a standard cell in the table -->
+          <!-- colspan attribute allows a cell to span multiple columns -->
+          <td colspan="2">riya</td>
+          <!-- rowspan attribute allows a cell to span multiple rows -->
+          <td rowspan="3">19</td>
+          <td>female</td>
+        </tr>
+        <tr>
+          <td>raksha</td>
+          <td>2nd</td>
+          <!-- td cell intentionally commented out -->
+          <!-- <td>19</td> -->
+          <td>female</td>
+        </tr>
+        <tr>
+          <td>yash</td>
+          <td>3rd</td>
+          <!-- td cell intentionally commented out -->
+          <!-- <td>19</td> -->
+          <td>male</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- ul tag is used to create an unordered list -->
+    <!-- type attribute specifies the bullet style -->
+    <ul type="square">
+      <p>This is a unordered list that have a shapes in front of the data</p>
+      <!-- li tag is used to define a list item -->
+      <li>Riya</li>
+      <li>Raksha</li>
+      <li>Yash</li>
+    </ul>
+    
+    <!-- ol tag is used to create an ordered list -->
+    <!-- type attribute specifies the numbering style -->
+    <ol type="A">
+      <p>This is a ordered list that have a four options(A,a,num, roman) in front of the data</p>
+      <li>Riya</li>
+      <li>Raksha</li>
+      <li>Yash</li>
+    </ol>
+  </body>
+  </html>
