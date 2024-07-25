@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector  */
+        /* This changes the background color of all div elements to light green */
+        div {
+            background-color: rgb(9, 255, 0);
+        }
+
+        /* Class Selector  */
+        /* This changes the background color of elements with the class 'red' to red */
+        .red {
+            background-color: red;
+        }
+
+        /* Id Selector */
+        /* This changes the background color of the element with the id 'green' to green */
+        #green {
+            background-color: green;
+        }
+
+        /* Child Selectors  */
+        /* This changes the text color to blue and background color to light blue 
+           for direct child p elements of div elements */
+        div > p {
+            color: blue;
+            background-color: rgb(42, 58, 165);
+        }
+
+        /* Descendant Selector  */
+        /* This changes the text color to blue and background color to light teal 
+           for all elements inside div elements, regardless of nesting level */
+        div article {
+            color: blue;
+            background-color: rgb(24, 170, 165);
+        }
+
+        /* Universal Selector */
+        /* This removes all margin and padding from all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector  */
+        /* These change the color of visited, link, active, and hover states of anchor (a) elements */
+        a:visited {
+            color: yellow;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:active {
+            background-color: red;
+        }
+
+        a:hover {
+            background-color: rgb(0, 26, 255);
+        }
+
+        /* This changes the background color of the first p element inside any parent to yellow */
+        p:first-child {
+            background-color: rgb(255, 200, 0);
+        }
+
+        /* Attribute Selector */
+        /* This changes the text color of input elements with type 'text' */
+        input[type="text"] {
+            color: blue;
+        }
+
+        /* Pseudo-element Selector */
+        /* This changes the color of the first letter of paragraph elements to red */
+        p::first-letter {
+            color: red;
+        }
+
+        /* Adjacent Sibling Selector */
+        /* This changes the background color of p elements that are immediately following h2 elements */
+        h2 + p {
+            background-color: rgb(186, 15, 15);
+        }
+
+        /* General Sibling Selector */
+        /* This changes the background color of all p elements that are siblings of h2 elements */
+        h2 ~ p {
+            background-color: rgb(104, 234, 236);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main section with a class of 'one' -->
+    <main class="one">
+        <!-- The first paragraph in the main section (will have yellow background) -->
+        <p>use class Selector</p>
+        <p>I am second</p>
+    </main>
+
+    <!-- A div with a class of 'red' (will have red background) -->
+    <div class="red">
+        I am a class red in a div
+        <article>
+            I am a para inside div -> article
+        </article>
+    </div>
+
+    <!-- A div with an id of 'green' (will have green background) -->
+    <div id="green">
+        I am another div with ID green
+    </div>
+
+    <!-- Links to external websites -->
+    <a href="https://www.google.com">link 1</a>
+    <a href="https://www.facebook.com">link 2</a>
+
+    <!-- Additional examples for other selectors -->
+    <h2>Sibling Selectors</h2>
+    <p>This paragraph is immediately following an h2 (adjacent sibling).</p>
+    <p>This paragraph is also a sibling of h2 (general sibling).</p>
+
+    <!-- Input element with type 'text' -->
+    <input type="text" value="Attribute Selector Example">
+
+    <!-- Paragraph to demonstrate the pseudo-element selector -->
+    <p>This paragraph demonstrates the pseudo-element selector.</p>
+</body>
+
+</html>
