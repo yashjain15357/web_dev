@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        /* Resetting default margins and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua; /* Background color of the box */
+        }
+
+        .box1 {
+            color: red; /* Text color */
+            margin: 5px; /* Space outside the border */
+            padding: 10px; /* Space inside the border, around the content */
+            border: solid black 5px; /* Border of the box */
+        }
+
+        .box2 {
+            color: rgb(47, 0, 255); /* Text color */
+            margin: 10px; /* Space outside the border */
+            padding: 10px; /* Space inside the border, around the content */
+            border: solid black 5px; /* Border of the box */
+        }
+
+        p {
+            background-color: cadetblue; /* Background color of the paragraph */
+            color: blanchedalmond; /* Text color of the paragraph */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box 1 with margin, padding, and border -->
+    <div class="box box1">This is a box1, margin: 5px, padding: 10px, border: solid black 5px.</div>
+    
+    <!-- Box 2 with a different margin value -->
+    <div class="box box2">This is a box2, margin: 10px, padding: 10px, border: solid black 5px.</div>
+    
+    <!-- Note about the margin between boxes -->
+    <p>Note: Greater margin is at work between two boxes.</p>
+    
+    <!-- Explanation of the box model concepts -->
+    <p>This picture shows the concept of content, padding, border, and margin.</p>
+    
+    <!-- Image demonstrating the CSS box model -->
+    <img src="image.png" width="400" alt="">
+</body>
+
+</html>
