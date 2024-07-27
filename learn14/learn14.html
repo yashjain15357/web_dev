@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        /* Styling for the heading */
+        .head {
+            font-family: Times New Roman, serif; /* Sets the font family to Times New Roman with a fallback to serif */
+            font-weight: bold; /* Makes the font bold */
+            font-variant: small-caps; /* Displays the text in small capital letters */
+            text-align: center; /* Centers the text */
+            text-decoration: underline dotted; /* Underlines the text with a dotted line */
+            text-decoration-color: blue; /* Sets the color of the underline to blue */
+            text-decoration-thickness: 5px; /* Sets the thickness of the underline */
+        }
+
+        /* Styling for the paragraph */
+        .para {
+            font-family: "Sofia", sans-serif; /* Sets the font family to Sofia with a fallback to sans-serif */
+            font-weight: 600; /* Sets the font weight to 600 */
+            font-size: 20px; /* Sets the font size to 20px */
+            font-style: italic; /* Makes the font italic */
+        }
+
+        /* Styling for the div with class 'lor' */
+        .lor {
+            border: solid rgb(24, 87, 151); /* Adds a solid border with the specified color */
+            width: 70px; /* Sets the width of the element */
+            height: 300px; /* Sets the height of the element */
+            word-break: break-all; /* Breaks words at any character to prevent overflow */
+            text-overflow: ellipsis; /* Displays an ellipsis (...) to represent clipped text */
+            overflow: hidden; /* Hides any overflow content */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 class="head">My intro</h2>
+        <p class="para">Hi, my name is Yash Jain</p>
+    </div>
+    <p class="lor">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam odio non tempore, sequi labore voluptates, dolorum dicta quam, velit blanditiis amet hic architecto animi. Sequi numquam minima dignissimos sed cupiditate?
+    </p>
+</body>
+
+</html>
