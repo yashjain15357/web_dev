@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selection Parameter</title>
+    <style>
+        /* Rule 1: Applied to the body element */
+        body {
+            background-color: black !important; /* !important makes this rule the highest priority */
+        }
+
+        /* Rule 2: Applied to elements with the class "imp" */
+        h1.imp {
+            color: rgb(204, 204, 204) !important; /* !important overrides any other rules, except for inline styles with !important */
+        }
+
+        /* Rule 3: Applied to all h1 elements */
+        h1 {
+            color: rgb(149, 202, 184);
+        }
+
+        /* Rule 4: Applied to the element with id "yash" */
+        #yash {
+            color: aqua;
+        }
+
+        /* Rule 5: Applied to elements with the class "ya" */
+        .ya {
+            color: rgb(14, 165, 115);
+        }
+
+        /* Rule 6: Applied to elements with the attribute "data-x" */
+        [data-x] {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This h1 uses the class "imp" and the !important rule in h1.imp will be applied -->
+    <h1 class="imp">important keyword</h1>
+
+    <!-- This h1 has an inline style, which has the highest specificity. The color blue will be applied -->
+    <h1 class="ya" style="color: blue;">inline style</h1>
+
+    <!-- This h1 uses the id "yash". The rule with id #yash will be applied -->
+    <h1 class="ya" id="yash">css with id</h1>
+
+    <!-- This h1 uses the class "ya". The rule with class .ya will be applied -->
+    <h1 class="ya">css with class</h1>
+
+    <!-- This h1 uses the class "ya" and the attribute "data-x". The rule with attribute [data-x] will be applied since it has higher specificity than the class selector .ya -->
+    <h1 class="ya" data-x="ua">css with attribute</h1>
+
+    <!-- This h1 uses the class "ya". The rule with class .ya will be applied -->
+    <h1 class="ya">css with tags</h1>
+</body>
+
+</html>
