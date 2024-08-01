@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units Type in CSS</title>
+    <style>
+        * {
+            /* Reset margin and padding for all elements, set base font size */
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+        }
+
+        div p:nth-child(1) {
+            /* vh: 1% of the height of the viewport */
+            width: 150vh;
+            height: 15vh;
+            border: solid black;
+            background-color: aqua;
+            font-size: 18px;
+        }
+
+        div p:nth-child(2) {
+            /* px: Absolute unit, fixed size in pixels */
+            width: 140px;
+            height: 70px;
+            color: greenyellow;
+            background-color: black;
+            font-size: 18px;
+        }
+
+        div p:nth-child(3) {
+            /* em: Relative to the font-size of the element */
+            width: 12em;
+            font-size: 2em; /* 2 times the size of the element's current font-size */
+            border: solid 5px;
+            background-color: rgba(0, 255, 255, 0.279);
+        }
+
+        div p:nth-child(4) {
+            /* %: Relative to the parent element */
+            font-size: 189%; /* 189% of the parent element's font-size */
+            background-color: rgb(155, 136, 250);
+        }
+
+        div p:nth-child(5) {
+            /* vmin: 1% of the viewport's smaller dimension (width or height) */
+            width: 50vmin;
+            font-size: 10vmin; /* 15% of the viewport's smaller dimension */
+            background-color: black;
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>vh: Relative to 1% of the height of the viewport</p>
+        <p>px: Absolute unit, fixed size in pixels</p>
+        <p>em: Relative to the font-size of the element (2em means 2 times the size of the current font)</p>
+        <p>%: Relative to the parent element</p>
+        <p>vmin: Relative to 1% of the viewport's smaller dimension</p>
+        <p>Resize the browser window (both width and height) to see how the font-size of h1 changes. 1vmin = 1vw or 1vh, whichever is smaller.</p>
+    </div>
+</body>
+
+</html>
