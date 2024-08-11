@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display properties</title>
+    <style>
+        /* This class defines a box with specific width, height, border, margin, and background color. 
+           It also sets the display property to none and visibility to hidden, so it won't appear on the page. */
+        .box {
+            width: 40vh; /* Sets the width of the element relative to the viewport height */
+            height: 10vw; /* Sets the height of the element relative to the viewport width */
+            border: 3px solid black; /* Adds a solid black border with a thickness of 3px */
+            margin: 10px; /* Adds a 10px margin around the element */
+            /* display: none; Hides the element entirely, it doesn't occupy any space on the page */
+            /* visibility: hidden; Even if display was set to block, this would make the element invisible, but it would still take up space */
+            background-color: aqua; /* Sets the background color of the element */
+        }
+
+        /* This class defines another box with similar properties but sets display to block. */
+        .box1 {
+            width: 40vh; /* Same width setting as .box */
+            height: 10vw; /* Same height setting as .box */
+            border: 3px solid black; /* Same border setting as .box */
+            margin: 10px; /* Same margin setting as .box */
+            display: block; /* Sets the element to block-level, meaning it takes up the full width and starts on a new line */
+            background-color: aquamarine; /* Sets the background color of the element */
+        }
+
+        /* This rule applies to all span elements, setting their display to inline, 
+           meaning they only take up as much space as their content and don't start on a new line */
+        span {
+            display: inline; /* The default display for span elements is inline, meaning they are not forced to start on a new line */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- These div elements have the "box" class. 
+             However, because display is set to "none", they will not be visible on the page. -->
+        <div class="box"> div is a block tag that contains a new line in every tag</div>
+        <div class="box">Change the div block to inline with the help of "display: inline"</div>
+    </div>
+    <div>
+        <!-- These span elements have the "box1" class, which forces them to behave as block-level elements 
+             despite being inline elements by default. This means they take up the full width and start on a new line. -->
+        <span class="box1">span is an inline tag</span>
+        <span class="box1">Make block with the help of "display: block"</span>
+    </div>
+</body>
+
+</html>
