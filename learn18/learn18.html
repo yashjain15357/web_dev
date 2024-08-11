@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        div {
+            margin: 10px;
+            background-color: aliceblue;
+            border: 2px solid saddlebrown;
+            display: inline;
+            font-size: 20px;
+            border-radius: 5px;
+            color: rgb(16, 16, 13);
+        }
+
+        .h-offset {
+            display: block;
+            max-width: fit-content;
+            margin: 10px;
+            box-shadow: 8px 8px 20px rgb(26, 255, 0);
+        }
+
+        .v-offset {
+            display: block;
+            max-width: fit-content;
+            margin: 10px;
+            box-shadow: 8px 8px 20px rgba(0, 102, 255, 0.915);
+        }
+
+        .blur {
+            display: block;
+            max-width: fit-content;
+            margin: 10px;
+            box-shadow: 8px 8px 20px rgba(255, 251, 0, 0.915);
+        }
+
+        .color {
+            display: block;
+            max-width: fit-content;
+            margin: 10px;
+            box-shadow: 8px 8px 20px rgba(255, 251, 0, 0.915);
+        }
+
+        .spread {
+            display: block;
+            max-width: fit-content;
+            margin: 10px;
+            box-shadow: 5px 10px 10px 8px green;
+        }
+
+        .inset {
+            display: block;
+            max-width: fit-content;
+            margin-top: 20px;
+            box-shadow: 5px 10px 10px green inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Box Shadow syntax: <code>box-shadow: h-offset v-offset blur spread color | none | inset | initial | inherit;</code>
+    </div>
+    <div class="h-offset">
+        It sets the horizontal position of the shadow. Positive values position the shadow to the right, and negative values position it to the left.
+    </div>
+    <div class="v-offset">
+        It sets the vertical position of the shadow. Positive values position the shadow at the bottom, and negative values position it at the top.
+    </div>
+    <div class="blur">
+        It sets the amount of blur in the shadow.
+    </div>
+    <div class="color">
+        It sets the color of the shadow.
+    </div>
+    <div class="spread">
+        It is used to set the size of the shadow. The size of the spread depends on the value of the spread.
+    </div>
+    <div class="inset">
+        Using the inset, we can create the shadow inside the box.
+    </div>
+</body>
+
+</html>
