@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .b0 {
+            position: relative; /* Relative positioning allows child elements with absolute positioning to be positioned relative to this element */
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(109, 201, 201, 0.26);
+            border: 3px solid black;
+            position: absolute; /* Absolute positioning removes the element from the document flow and positions it relative to the nearest positioned ancestor */
+            /* By default, this element would be positioned relative to .b0 because .b0 is positioned relative */
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            top: 200px; /* Positioned 200px from the top of its containing block (in this case, the nearest positioned ancestor) */
+            background-color: aqua;
+            border: 3px solid black;
+            position: relative; /* Relative positioning moves the element relative to its normal position */
+        }
+
+        .absolute {
+            position: absolute; /* Absolute positioning removes the element from the document flow and positions it relative to the nearest positioned ancestor */
+            width: 100px;
+            height: 100px;
+            top: 300px; /* Positioned 300px from the top of its containing block */
+            right: 100px; /* Positioned 100px from the right of its containing block */
+            background-color: aqua;
+            border: 3px solid black;
+            /* margin-left: 220px; This property is commented out; if used, it would create space to the left of the element */
+        }
+
+        .relative {
+            width: 100px;
+            height: 1000px;
+            top: 400px; /*This property does not affect the element because its position is relative*/
+            position: relative; /* Relative positioning moves the element relative to its normal position */
+            background-color: aqua;
+            border: 3px solid black;
+            margin: 10px; /* This margin creates space around the element */
+        }
+        
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 26, 255, 0.322);
+            border: 3px solid black;
+            margin: 10px;
+            top: 400px; /* Positioned 400px from the top of the viewport */
+            position: fixed; /* Fixed positioning removes the element from the document flow and positions it relative to the viewport */
+            /* The element remains fixed in place even when scrolling the page */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b0">
+        <div class="box1">my box1</div>
+        <div class="box2">my box2</div>
+        <div class="absolute">my box3</div>
+        <div class="relative">position: relative Lorem857sum, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptatem, consequatur impedit dolor natus facilis reprehenderit nihil expedita eveniet at fugit quasi, ullam modi libero dignissimos incidunt explicabo quidem commodi sint amet repudiandae! Porro, esse? Voluptatum sapiente eaque hic ipsum ut tempora ab quibusdam, architecto deserunt maxime, saepe a itaque perspiciatis rem voluptas reiciendis inventore nihil fugiat molestiae! Illum voluptas provident qui eos aliquam doloribus aut, quod obcaecati odit corporis enim reprehenderit iste omnis consequatur accusamus rem esse earum sit, quibusdam facere recusandae corrupti pariatur! Odio dolore a incidunt quas, magni nobis asperiores eveniet possimus sunt, eaque similique beatae maiores?dolor sit amet consectetur</div>
+        <div class="fixed">position: fixed</div>
+    </div>
+</body>
+
+</html>
