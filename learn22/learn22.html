@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root {
+            /* CSS variable for the border width */
+            --bod: 2px;
+            
+            /* CSS variable for the primary color (used for both border and background) */
+            --col: black;
+            
+            /* CSS variable for the text color */
+            --cal: brown;
+        }
+
+        .box {
+            /* Set the width of the box */
+            width: 200px;
+
+            /* Set the height of the box */
+            height: 200px;
+
+            /* Use the --bod variable for the border width and the --col variable for the border color */
+            border: var(--bod) solid var(--col);
+
+            /* Use the --cal variable for the text color */
+            color: var(--cal);
+
+            /* Use the --col variable for the background color */
+            background-color: var(--col);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box with the applied CSS styles -->
+    <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quam
+        animi quia ea ex, aliquid sint nihil, quo, repellendus eaque autem. Hic id quidem at eligendi quasi nemo atque
+        sit?</div>
+</body>
+
+</html>
