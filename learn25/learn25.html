@@ -1,0 +1,83 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        /* Container class for flexbox layout */
+        .container {
+            border: 2px solid red; /* Red border around the container */
+            display: flex; /* Defines a flex container */
+            height: 80vh; /* Sets the height to 80% of the viewport height */
+            /* justify-content: center;  Centers the items horizontally */
+            align-items: center; /* Centers the items vertically */
+            /* flex-direction: column;  Arranges the items in a column */
+            flex-wrap: wrap; /* Allows the items to wrap onto multiple lines if necessary */
+            /* align-content: flex-start; Aligns the wrapped lines to the start of the container */
+            /* there is no justify-items in flexbox; */
+            flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+            /* gap: 30px;  Defines a gap of 30px between items */
+            /* row-gap: 40px; Defines a row gap of 40px between items */
+            /* column-gap: 10px; Defines a column gap of 10px between items */
+            gap: 40px 10px; /* Shorthand for row-gap and column-gap */
+        }
+
+        /* Item class for flex items */
+        .item {
+            /* flex-grow: 1;  Allows the item to grow to fill available space */
+            height: 92px; /* Sets the height of the item */
+            width: 92px; /* Sets the width of the item */
+            border: 2px solid black; /* Black border around the item */
+            /* margin: 4px;  Defines a margin around the item */
+            background-color: blueviolet; /* Background color of the item */
+        }
+
+        /* Order classes to change the order of items */
+        .order-1 {
+            order: 1; /* Sets the order of the item to 1 */
+        }
+
+        .order-2 {
+            order: 2; /* Sets the order of the item to 2 */
+        }
+
+        .order-3 {
+            order: 3; /* Sets the order of the item to 3 */
+        }
+
+        /* Specific styling for the first item */
+        .item1 {
+            /* flex-grow: 2;  Allows the item to grow more than others */
+            flex-shrink: 2; /* Allows the item to shrink more than others */
+            /* align-self: flex-end; Aligns the item to the end of the container */
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
