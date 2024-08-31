@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /*
+        .box:first-child {
+            background-color: red;
+        }
+        This selector applies styles to the first child element with the class 'box' and sets its background color to red.
+        */
+
+        /*
+        .box::first-line {
+            color: yellow;
+        }
+        This selector applies styles to the first line of text in elements with the class 'box' and sets the text color to yellow.
+        */
+
+        /*
+        .boxes * {
+            color: blue;
+            border: 2px solid black;
+        }
+        This selector applies styles to all elements within the element with the class 'boxes', setting their text color to blue and adding a 2px solid black border.
+        */
+
+        /*
+        p, a, .box, [data-color="primary"] {
+            padding-top: 45px;
+        }
+        This selector applies styles to all 'p' and 'a' elements, elements with the class 'box', and elements with the attribute 'data-color="primary"', setting their top padding to 45px.
+        */
+
+        /*
+        .box:nth-child(odd) {
+            background-color: blue;
+        }
+        This selector applies styles to every odd-numbered child element with the class 'box', setting their background color to blue.
+        */
+
+        /*
+        .box:nth-last-child(2) {
+            background-color: red;
+        }
+        This selector applies styles to the second to last child element with the class 'box', setting its background color to red.
+        */
+
+        .boxes::before {
+            content: "Harry is good";
+            color: blue;
+        }
+        /* This selector inserts the content "Harry is good" before the content of the element with the class 'boxes' and sets its color to blue. */
+
+        .boxes::after {
+            content: "Sigma course is also good";
+            color: red;
+        }
+        /* This selector inserts the content "Sigma course is also good" after the content of the element with the class 'boxes' and sets its color to red. */
+
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+        /* This selector applies styles to the text that is selected by the user, setting the background color to black and the text color to aqua. */
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+        /* This selector applies styles to the first letter of the text in elements with the class 'box', setting its color to peru and its font size to 45px. */
+        
+        /*
+        .b::first-letter {
+            color: peru;
+            font-size: 45px;
+            display: inline;
+        }
+        This selector applies styles to the first letter of the text in elements with the class 'b', setting its color to peru, font size to 45px, and display property to inline.
+        */
+
+        input::placeholder {
+            color: rgb(84, 84, 88);
+        }
+        /* This selector applies styles to the placeholder text in 'input' elements, setting its color to a specific shade of gray (rgb(84, 84, 88)). */
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box b">yash </div>
+        <div class="box b">Jain </div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
