@@ -1,0 +1,64 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw; /* 80% of the viewport width */
+            height: 100vh; /* 100% of the viewport height */
+            border: 2px solid black; /* Black border around the container */
+            display: grid; /* Use CSS Grid layout */
+            /* grid-template-columns: [pehla] 120px [doosra] 100px [t]; */ /* Commented out: Defines columns with custom names */
+            /* grid-template-rows: 100px 100px 100px; */ /* Commented out: Defines rows with fixed heights */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */ /* Commented out: Defines 4 columns with min width 100px and max width 1fr */
+            grid-template-columns: repeat(4, 80px); /* Defines 4 columns each with 80px width */
+            grid-template-rows: repeat(2, 80px); /* Defines 2 rows each with 80px height */
+            /* gap: 34px; */ /* Commented out: Defines a 34px gap between grid items */
+            row-gap: 10px; /* 10px gap between rows */
+            column-gap: 44px; /* 44px gap between columns */
+            justify-items: center; /* Center items horizontally within their grid area */
+            align-items: center; /* Center items vertically within their grid area */
+        }
+
+        .item {
+            border: 2px solid red; /* Red border around each item */
+            height: 55px; /* Fixed height for each item */
+            width: 55px; /* Fixed width for each item */
+        }
+
+        .item-4 {
+            /* grid-row: 1/2; */ /* Commented out: Span from row 1 to 2 */
+            grid-column: pehla/t; /* Span from the column named "pehla" to the column named "t" */
+        }
+
+        .item-1 {
+            grid-row: 1/2; /* Span from row 1 to 2 */
+            /* or you can do  */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+
+            /* same thing */
+            /* grid-column: 1/2; */ /* Commented out: Span from column 1 to 2 */
+        }
+
+        .item-5 {
+            grid-row: 2/3; /* Span from row 2 to 3 */
+            grid-column: doosra/4; /* Span from the column named "doosra" to column 4 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div> <!-- Added item-5 to demonstrate spanning -->
+    </div>
+</body>
+
+</html>
