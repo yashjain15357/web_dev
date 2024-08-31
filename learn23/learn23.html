@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+        body > div {
+            background-color: black;
+            border: 1px;
+            border-radius: 5px;
+        }
+        p {
+            color: aqua;
+        }
+        @media only screen and (max-width: 400px) {
+            /*
+            Media Query Definition:
+            A media query is a CSS technique used to apply styles based on the conditions of the device's characteristics, 
+            such as its width, height, orientation, resolution, etc. In this case, the media query applies styles only 
+            if the screen width is 400 pixels or less.
+            */
+            body {
+                background-color: black; /* Changes body background color to black for small screens */
+            }
+            body > div {
+                background-color: greenyellow; /* Changes div background color to greenyellow for small screens */
+            }
+            p {
+                color: rgb(46, 57, 59); /* Changes text color of p elements to dark grey for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit at quae rerum pariatur incidunt dolor consequuntur quas ducimus non delectus magni exercitationem, voluptas sed labore!</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatum ratione adipisci nihil amet enim.</p>
+    </div>
+</body>
+</html>
